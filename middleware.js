@@ -16,7 +16,3 @@ const fileStorage = multer.diskStorage({
 });
 
 module.exports = fileStorage;
-
-app.use(multer({
- storage:fileStorage
-}).single("image"))
