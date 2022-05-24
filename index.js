@@ -14,6 +14,7 @@ require("ejs");
 
 
 app.use("/",express.static(path.resolve("./images")))
+
 app.use(multer({
     storage:fileStorage
 }).single("image"))
