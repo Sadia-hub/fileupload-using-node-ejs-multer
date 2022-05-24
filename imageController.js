@@ -16,8 +16,9 @@ const imageUpload = async (req, res) =>{
 
 const insertImage = async (req, res) =>{
     try{
+        console.log(req.body)
         const user = await imageModel.create({...req.body, image:req.file.filename})
-        console.log(user)
+        //console.log(user)
 
         res.redirect("/")
     }catch(err){
