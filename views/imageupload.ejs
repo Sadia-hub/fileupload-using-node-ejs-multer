@@ -1,0 +1,40 @@
+<div style="text-align:center;margin:40px;">
+    <form action="/" method="post" enctype="multipart/form-data">.
+        <div>
+            <input type="file" name="image" id="image" />
+        </div>
+        <div style="margin-top: 40px">
+            <label for="name">Name</label>
+            <input name="name" id="name" type="text" />
+        </div>
+        <input type="submit" />
+    </form>
+    <legend/>
+    <br/>
+    <br/>
+    <br/>
+
+   <%if(users){%> 
+    <div>
+        <table >
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%users.forEach((user,i)=>{%>
+                    <tr>
+                        <td><%=i%></td>
+                        <td><%=user.name%></td>
+                        <td><img src=<%=user.image%> width="100ppx"></td>
+                    </tr>
+                    
+                <%})%>
+            </tbody>
+        </table>
+    </div>
+    <%}%>
+</div>
